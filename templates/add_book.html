@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add a new book</title>
+</head>
+<body>
+    <h1>Add a new book</h1>
+    <form method="post" action="{{ url_for('add_book') }}">
+        {{ form.csrf_token }}
+        {{ form.title.label }}: {{ form.title }}
+        {{ form.author.label }}: {{ form.author }}
+        {{ form.submit }}
+    </form>
+</body>
+</html>
