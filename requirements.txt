@@ -21,7 +21,6 @@ Flask-Migrate==4.0.1
 Flask-SQLAlchemy==3.0.2
 Flask-WTF==1.1.1
 fonttools==4.38.0
-future @ file:///System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot7/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/python3/python3-133.100.1.1/future-0.18.2-py3-none-any.whl
 greenlet==2.0.1
 idna==3.4
 importlib-metadata==6.0.0
