@@ -2,14 +2,25 @@
 <html>
 <head>
     <title>Add a new book</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Add a new book</h1>
-    <form method="post" action="{{ url_for('add_book') }}">
-        {{ form.csrf_token }}
-        {{ form.title.label }}: {{ form.title }}
-        {{ form.author.label }}: {{ form.author }}
-        {{ form.submit }}
-    </form>
+
+<header>
+    {% include 'header.html' %}
+    <button class="button-back" id="backBtn" onclick="window.history.back()">Back</button>
+</header>
+<h1>Add a new book</h1>
+
+
+<form method="post" action="{{ url_for('add_book') }}">
+    {{ form.csrf_token }}
+    <div class="main">
+        <div>{{ form.title.label }}: {{ form.title }}</div>
+        <div>{{ form.author.label }}: {{ form.author }}</div>
+        <div>{{ form.submit }}</div>
+    </div>
+</form>
+
 </body>
 </html>

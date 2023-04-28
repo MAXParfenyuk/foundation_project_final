@@ -1,0 +1,32 @@
+<header>
+    <nav>
+        <button id="toggleTheme" onClick="toggleDarkMode()"></button>
+    </nav>
+</header>
+
+<script>
+    const toggleThemeBtn = document.getElementById("toggleTheme");
+    const body = document.body;
+
+    toggleThemeBtn.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
+        toggleThemeBtn.classList.toggle("active");
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            localStorage.setItem("darkMode", "disabled");
+        }
+    });
+
+    const darkMode = localStorage.getItem("darkMode");
+
+    if (darkMode === "enabled") {
+        body.classList.add("dark-mode");
+        toggleThemeBtn.classList.add("active");
+    } else {
+        body.classList.remove("dark-mode");
+        toggleThemeBtn.classList.remove("active");
+    }
+</script>
+
+
