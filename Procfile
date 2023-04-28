@@ -1,1 +1,1 @@
-web: foundation-project:app
+web: gunicorn app:app
